@@ -70,12 +70,6 @@ body {
     background: transparent; 
 }
 
-.terminal-box h2 {
-    margin-top: 0;
-    color: #fff;
-    border-bottom: 1px solid #22ff99;
-    display: inline-block;
-}
 
 .inner-text p {
     line-height: 1.6;
