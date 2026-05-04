@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Certificates</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -17,13 +17,52 @@
         
         <header class="w-full max-w-4xl flex flex-col md:flex-row justify-between items-center border-b border-green-900/50 pb-4 mb-12">
             <span class="text-xl font-bold tracking-widest text-green-500">
-                WELCOME
-            
+            Certificates
             </span>
             <nav class="flex gap-6 text-sm mt-4 md:mt-0 uppercase">
-                <a href="index.html" class="text-green-400">Home</a>
+                <a href="index.html" class="hover:text-green-400 transition-colors">HOME</a>
                 <a href="about.html" class="hover:text-green-400 transition-colors">About</a>
                 <a href="stacks.html" class="hover:text-green-400 transition-colors">Stacks</a>
                 <a href="certificate.html" class="hover:text-green-400 transition-colors">Certificates</a>
             </nav>
         </header>
+
+        <main class="max-w-6xl mx-auto w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="flex flex-col items-center gap-4">
+                    <div class="border border-green-900 p-1 bg-black">
+                        <img src="images/Certificates/PPT.jpg" alt="Powerpoint" 
+                             class="w-full h-48 object-cover cursor-pointer hover:grayscale-0 transition"
+                             onclick="showLightbox(this.src)">
+                    </div>
+                    <a href="https://www.certiport.com/portal/desktopdefault.aspx?tabid=110&roleid=1" target="_blank" class="text-green-500 text-xs font-bold hover:underline">
+                        > MICROSOFT POWERPOINT (Microsoft 365 Apps)
+                    </a>
+                </div>
+
+                </div>
+        </main>
+
+    <div id="lightbox" class="hidden fixed inset-0 z-50 bg-black/90 flex flex-col items-center justify-center p-4 cursor-pointer" onclick="this.classList.add('hidden')">
+        <img id="lb-img" src="" class="max-w-full max-h-[80vh] border border-green-500 shadow-lg shadow-green-500/20">
+        <p class="mt-4 text-green-500 text-[10px] tracking-widest uppercase">Click to close</p>
+    </div>
+
+ <script>
+        function showLightbox(src) {
+            document.getElementById('lb-img').src = src;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
+
+                </div>
+        </main>
+    </div>
+
+   
+</body>
+</html>
