@@ -7,12 +7,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-<style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@700&family=VT323&display=swap" rel="stylesheet">
+
+    <style>
     
-        .matrix-glow {
-            text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+    .matrix-glow {
+        text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
         }
-    </style>
+
+    .font-matrix { font-family: 'VT323', monospace; }
+    .font-cyber { font-family: 'Orbitron', sans-serif; }
+    .font-jetbrains { font-family: 'JetBrains Mono', monospace; }
+    
+    .matrix-glow {
+        text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+    }
+
+    @keyframes scan {
+        0%, 100% { top: 0%; }
+        50% { top: 100%; }
+    }
+    .animate-scan {
+        animation: scan 4s linear infinite;
+    }
+    
+    .bg-scanlines {
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 255, 65, 0.1) 50%);
+        background-size: 100% 4px;
+    }
+</style>
 
 </head> 
 
@@ -26,8 +51,8 @@
 
     <div class="flex flex-col items-center p-6 md:p-12">
         
-        <header class="w-full max-w-4xl flex flex-col md:flex-row justify-between items-center border-b border-green-900/50 pb-4 mb-12">
-            <span class="text-xl font-bold tracking-widest text-green-500">CORRAL</span>           
+    <header class="w-full max-w-4xl flex flex-col md:flex-row justify-between items-center border-b border-green-900/50 pb-4 mb-12">
+    <span class="text-3xl font-matrix tracking-widest text-green-500 matrix-glow">CORRAL</span>        
             </span>
             <nav class="flex gap-6 text-sm mt-4 md:mt-0 uppercase">
                 <a href="index.html" class="hover:text-green-400 transition-colors">HOME</a>
@@ -38,11 +63,12 @@
         </header>
 
     <main class="w-full max-w-2xl flex flex-col items-center text-center">
-
             <div class="mb-8">
-                <div class="p-1 border-2 border-green-500/30 inline-block rounded-sm">
-                    <img src="images/home/home-lawrence.jpg" alt="Lawrence Dave" 
-                         class="w-48 h-60 md:w-80 md:h-72 object-cover grayscale border border-green-500">
+                <div class="relative p-1 border-2 border-green-500/30 inline-block rounded-sm bg-black overflow-hidden shadow-[0_0_15px_rgba(34,197,94,0.3)]">
+                <div class="absolute top-1 left-1 z-20 text-[10px] font-matrix text-green-500/80 uppercase">Subject: CORRAL</div>
+                <div class="absolute left-0 w-full h-[2px] bg-green-400 shadow-[0_0_8px_#4ade80] z-30 animate-scan"></div>
+                <div class="absolute inset-0 z-10 bg-scanlines pointer-events-none"></div>
+                <img src="images/home/home-lawrence.jpg" alt="Lawrence Dave"  class="w-48 h-60 md:w-80 md:h-72 object-cover grayscale brightness-110 contrast-125 sepia hue-rotate-[90deg] saturate-[200%] opacity-80">
                 </div>
             </div>
 
@@ -54,7 +80,7 @@
                 </div>   
 
                 <div class="p-8">
-                    <h1 class="text-green-500 text-2xl font-bold mb-4 tracking-tighter">
+                    <h1 class="text-green-500 text-2xl font-cyber mb-4 tracking-tighter">
                         I am <span class="text-green-400">Lawrence Dave Corral</span>, aspiring 
                         frontend web developer and game developer. 
                     </h1>
