@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lawrence Dave Corral | Certificates</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@700&family=VT323&display=swap" rel="stylesheet">
 
     <style>
+
+    .matrix-glow {
+        text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+        }
+
+    .font-matrix { font-family: 'VT323', monospace; }
+    .font-cyber { font-family: 'Orbitron', sans-serif; }
+    .font-jetbrains { font-family: 'JetBrains Mono', monospace; }
+    
+    .matrix-glow {
+        text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+    }
 
         .font-matrix { font-family: 'VT323', monospace; }
 
@@ -33,21 +50,19 @@
 
 <body class="bg-black text-gray-300 font-mono antialiased min-h-screen">
 
-    <div class="fixed inset-0 -z-10 overflow-hidden">
-        <img src="images/certificates/cert-matrix.jpg" alt="Background" class="w-full h-full object-cover opacity-30">
+    <div id="vanta-bg" class="fixed inset-0 -z-10 overflow-hidden">
+    <img src="images/certificates/cert-matrix.jpg" alt="Background" class="w-full h-full object-cover opacity-10">
     </div>
 
      <div class="flex flex-col items-center p-6 md:p-12">
         
-     <header class="w-full max-w-4xl flex flex-col md:flex-row justify-between items-center border-b border-green-900/50 pb-4 mb-12">
-            <span class="text-xl font-bold tracking-widest text-green-500 matrix-glow">
-                CORRAL
-            </span>
+    <header class="w-full max-w-4xl flex flex-col md:flex-row justify-between items-center border-b border-green-900/50 pb-4 mb-12">
+    <span class="text-3xl font-matrix tracking-widest text-white-500 matrix-glow">CORRAL</span>    
             <nav class="flex gap-6 text-sm mt-4 md:mt-0 uppercase">
-                <a href="index.html" class="hover:text-green-400 transition-colors">HOME</a>
-                <a href="about.html" class="hover:text-green-400 transition-colors">About</a>
-                <a href="stacks.html" class="hover:text-green-400 transition-colors">Stacks</a>
-                <a href="certificate.html" class="hover:text-green-400 transition-colors">Certificates</a>
+                <a href="index.html" class="hover:text-green-400 transition-colors font-jetbrains">HOME</a>
+                <a href="about.html" class="hover:text-green-400 transition-colors font-jetbrains">About</a>
+                <a href="stacks.html" class="hover:text-green-400 transition-colors font-jetbrains">Stacks</a>
+                <a href="certificate.html" class="hover:text-green-400 transition-colors font-jetbrains">Certificates</a>
             </nav>
         </header>
 
@@ -62,8 +77,8 @@
                              class="w-full h-64 object-contain cursor-pointer"
                              onclick="showLightbox('images/certificates/cert-ppt.jpg')">
                     </div>
-                    <a href="https://www.certiport.com/portal/pages/credentialverification.aspx" target="_blank" 
-                       class="text-green-500 text-[13px] font-bold mt-6 tracking-tighter text-center uppercase hover:underline">
+                    <a href="https://www.credly.com/badges/4095c44e-a323-48e7-b235-58d10aae0eda/public_url" target="_blank" 
+                       class="text-green-500 text-[13px] font-bold mt-6 tracking-tighter text-center uppercase hover:underline font-jetbrains">
                         > VERIFICATION: PPT Associate Certificate
                     </a>
                 </div>
@@ -75,8 +90,8 @@
                              class="w-full h-64 object-contain cursor-pointer"
                              onclick="showLightbox('images/certificates/cert-word.jpg')">
                     </div>
-                    <a href="https://www.certiport.com/portal/pages/credentialverification.aspx" target="_blank" 
-                       class="text-green-500 text-[13px] font-bold mt-6 tracking-tighter text-center uppercase hover:underline">
+                    <a href="https://www.credly.com/badges/5b109027-fc3e-4eaa-a7ff-549cee0f3ab6/public_url" target="_blank" 
+                       class="text-green-500 text-[13px] font-bold mt-6 tracking-tighter text-center uppercase hover:underline font-jetbrains">
                         > VERIFICATION: MS Word Associate Certificate
                     </a>
                 </div>
@@ -88,8 +103,8 @@
                              class="w-full h-64 object-contain cursor-pointer"
                              onclick="showLightbox('images/certificates/cert-java.jpg')">
                     </div>
-                    <a href="https://www.certiport.com/portal/pages/credentialverification.aspx" target="_blank" 
-                       class="text-green-500 text-[13px] font-bold mt-6 tracking-tighter text-center uppercase hover:underline">
+                    <a href="https://www.credly.com/badges/48014d94-aeae-4989-b3a3-a33fd15dcc79/public_url" target="_blank" 
+                       class="text-green-500 text-[13px] font-bold mt-6 tracking-tighter text-center uppercase hover:underline font-jetbrains">
                         > VERIFICATION: Java Certificate
                     </a>
                 </div>
@@ -105,15 +120,30 @@
             document.getElementById('lb-img').src = src;
             document.getElementById('lightbox').classList.remove('hidden');
         }
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+        VANTA.NET({
+            el: "#vanta-bg", // This now matches the ID above
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x00ff41,
+            backgroundColor: 0x0,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 16.00
+        })
+    });
     </script>
 
 </body>
 </html>
-
-                </div>
         </main>
-    </div>
+    
 
    
-</body>
-</html>
