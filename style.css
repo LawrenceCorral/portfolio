@@ -1,88 +1,31 @@
-body {
-    margin: 0;
-    padding: 0;
-    color: #22ff99;
-    font-family: 'Courier New', Courier, monospace;
-    background: none; 
-}
+ .matrix-glow {
+        text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+        }
 
-.bg-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+    .font-matrix { font-family: 'VT323', monospace; }
+    .font-cyber { font-family: 'Orbitron', sans-serif; }
+    .font-jetbrains { font-family: 'JetBrains Mono', monospace; }
+    
+    .matrix-glow {
+        text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+    }
 
-}
+        .font-matrix { font-family: 'VT323', monospace; }
 
-.full-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(50%) contrast(120%);
-}
+        .matrix-glow {
+            text-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+        }
 
-.content {
-    padding: 60px;
-}
+         .animate-scan {
+            animation: scan 4s linear infinite;
+        }
 
-.header {
-    border-bottom: 2px solid #22ff99;
-    padding-bottom: 15px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
-}
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
 
-.name {
-    font-weight: bold;
-    font-size: 24px;
-    text-shadow: 0 0 10px #22ff99;
-}
-
-.navbar a {
-    color: #22ff99;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-.main-frame {
-    display: flex;
-    align-items: flex-start;
-    width: 100%; 
-}
-
-.photo {
-    width: 250px;
-    height: 250px;
-    border: 2px solid #22ff99;
-    filter: grayscale(100%) contrast(120%);
-    object-fit: cover;
-}
-
-.terminal-box {
-    margin-left: 40px;
-    border: 1px solid #22ff99;
-    padding: 30px;
-    flex-grow: 1; 
-    background: transparent; 
-}
-
-
-.inner-text p {
-    line-height: 1.6;
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-.console-footer {
-    margin-top: 30px;
-    font-weight: bold;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink { 
-    50% { opacity: 0; } 
-}
+        .bg-scanlines {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 255, 65, 0.05) 50%);
+            background-size: 100% 4px;
+        }
