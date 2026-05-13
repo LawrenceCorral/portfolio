@@ -11,10 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@700&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body class="bg-black text-gray-300 font-mono antialiased min-h-screen">
 
+    
     <div id="vanta-bg" class="fixed inset-0 -z-10 overflow-hidden">
     <img src="images/certificates/cert-matrix.jpg" alt="Background" class="w-full h-full object-cover opacity-10">
     </div>
@@ -33,6 +35,8 @@
 
 
         <main class="w-full max-w-6xl">
+            
+        <div class="w-full text-center bg-black/40 backdrop-blur-md p-8 border border-green-500/50 rounded-lg shadow-xl mb-12">
             <div class="flex flex-wrap justify-center items-start gap-12 md:gap-16">
 
                 <div class="flex flex-col items-center group w-72">
@@ -80,35 +84,11 @@
         <p class="mt-4 text-green-500 text-[10px] tracking-widest uppercase">Click to close</p>
     </div>
 
- <script>
-        function showLightbox(src) {
-            document.getElementById('lb-img').src = src;
-            document.getElementById('lightbox').classList.remove('hidden');
-        }
-
-
-        window.addEventListener('DOMContentLoaded', () => {
-        VANTA.NET({
-            el: "#vanta-bg", // This now matches the ID above
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x00ff41,
-            backgroundColor: 0x0,
-            points: 12.00,
-            maxDistance: 22.00,
-            spacing: 16.00
-        })
-    });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
-        </main>
+</main>
     
 
    
