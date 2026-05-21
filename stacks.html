@@ -1,206 +1,186 @@
- <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Stacks | Lawrence Dave Corral</title>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-            <script src="https://cdn.tailwindcss.com"></script>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@700&family=VT323&display=swap" rel="stylesheet href">
-            <link rel="stylesheet" href="style.css">
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacks | Lawrence Dave Corral</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        </head>
-
-    <body class="bg-black text-gray-300 font-mono antialiased min-h-screen">
+<body class="bg-black text-gray-300 font-mono antialiased min-h-screen">
 
     <div id="vanta-bg" class="fixed inset-0 -z-10 overflow-hidden">
-    <img src="images/stacks/stacks-matrix.jpg" alt="Background" class="w-full h-full object-cover opacity-10">
+        <img src="images/stacks/stacks-matrix.jpg" alt="Background" class="w-full h-full object-cover opacity-10">
     </div>
 
-
-<div class="flex flex-col items-center p-6 md:p-12">
-    
-    <header class="w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center border-b border-green-900/50 py-8 px-6">
-        <span class="text-3xl font-matrix tracking-widest text-white matrix-glow">CORRAL</span>    
-        <nav class="flex gap-8 text-sm mt-4 md:mt-0 uppercase">
-            <a href="index.html" class="hover:text-green-400 transition-colors font-jetbrains">HOME</a>
-            <a href="about.html" class="hover:text-green-400 transition-colors font-jetbrains">About</a>
-            <a href="stacks.html" class="text-green-500 hover:text-green-400 transition-colors font-jetbrains">Stacks</a>
-            <a href="certificate.html" class="hover:text-green-400 transition-colors font-jetbrains">Certificates</a>
-        </nav>
-    </header>
-
- <main class="w-full max-w-6xl mx-auto px-6">
-    <div class="text-center mb-12">
-        <h2 class="text-4xl font-matrix text-white mb-2">Tech Stack</h2>
-    </div>
-
-    <!-- LANGUAGES SECTION -->
-    <div class="w-full text-center bg-black/40 backdrop-blur-md p-8 border border-green-500/50 rounded-lg shadow-xl mb-12">
-        <h5 class="mb-8 text-2xl tracking-widest font-matrix text-green-500 uppercase">Languages</h5>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <!-- Java Card -->
-            <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
-                <div class="absolute inset-0 pointer-events-none">
-                    <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
-                    <div class="absolute inset-0 bg-scanlines opacity-20"></div>
-                </div>
-                <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
-                    <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-java.png" alt="Java">
-                </div>
-                <div class="px-6 py-4">
-                    <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">Java</div>
-                </div>
-            </div>
-
-            <!-- JavaScript Card -->
-            <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
-                <div class="absolute inset-0 pointer-events-none">
-                    <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
-                    <div class="absolute inset-0 bg-scanlines opacity-20"></div>
-                </div>
-                <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
-                    <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-javascript.png" alt="JS">
-                </div>
-                <div class="px-6 py-4">
-                    <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">JavaScript</div>
-                </div>
-            </div>
-
-
-            <!-- HTML Card -->
-            <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
-                <div class="absolute inset-0 pointer-events-none">
-                    <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
-                    <div class="absolute inset-0 bg-scanlines opacity-20"></div>
-                </div>
-                <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
-                    <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-css.png" alt="HTML">
-                </div>
-                <div class="px-6 py-4">
-                    <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">HTML</div>
-                </div>
-            </div>
-
-        </div> 
-    </div> 
-
-<!-- TOOLS SECTION -->
-<div class="w-full text-center bg-black/40 backdrop-blur-md p-8 border border-green-500/50 rounded-lg shadow-xl mb-10">
-    <h5 class="text-green-500 font-matrix text-2xl mb-8 tracking-widest uppercase">> Tools</h5>
-    
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- VSCode -->
-        <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
-            <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
-                <div class="absolute inset-0 bg-scanlines opacity-20"></div>
-            </div>
-            <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
-                <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-vscode.png" alt="VSCode">
-            </div>
-            <div class="px-6 py-4">
-                <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">VSCode</div>
-            </div>
-        </div>
-
-        <!-- SSMS -->
-        <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
-            <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
-                <div class="absolute inset-0 bg-scanlines opacity-20"></div>
-            </div>
-            <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
-                <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-ssms.png" alt="SSMS">
-            </div>
-            <div class="px-6 py-4">
-                <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">SSMS</div>
-            </div>
-        </div>
-
-        <!-- GitHub -->
-        <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
-            <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
-                <div class="absolute inset-0 bg-scanlines opacity-20"></div>
-            </div>
-            <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
-                <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-git.png" alt="GitHub">
-            </div>
-            <div class="px-6 py-4">
-                <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">GitHub</div>
-            </div>
-        </div>
-
-        <!-- Android Studio -->
-        <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
-            <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
-                <div class="absolute inset-0 bg-scanlines opacity-20"></div>
-            </div>
-            <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
-                <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-android.png" alt="Android Studio">
-            </div>
-            <div class="px-6 py-4">
-                <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">Android Studio</div>
-            </div>
-        </div>
-
-        <!-- PostgreSQL -->
-        <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
-            <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
-                <div class="absolute inset-0 bg-scanlines opacity-20"></div>
-            </div>
-            <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
-                <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-postgre.png" alt="PostgreSQL">
-            </div>
-            <div class="px-6 py-4">
-                <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">PostgreSQL</div>
-            </div>
-        </div>
-
-        <!-- Git -->
-        <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
-            <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
-                <div class="absolute inset-0 bg-scanlines opacity-20"></div>
-            </div>
-            <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
-                <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-gitt.png" alt="Git">
-            </div>
-            <div class="px-6 py-4">
-                <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">Git</div>
-            </div>
-        </div>
-
-        <!-- MongoDB -->
-        <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
-            <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
-                <div class="absolute inset-0 bg-scanlines opacity-20"></div>
-            </div>
-            <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
-                <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-mongo.png" alt="MongoDB">
-            </div>
-            <div class="px-6 py-4">
-                <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">MongoDB</div>
-            </div>
-        </div>
-
-    </div> 
-</div> 
-</main>
+    <div class="flex flex-col items-center p-6 md:p-12">
    
-</div>
-    </main>
+             
+        <header class="w-full max-w-4xl flex flex-col md:flex-row justify-between items-center border-b border-green-900/50 pb-4 mb-12">
+            <span class="text-3xl font-matrix tracking-widest text-white matrix-glow">CORRAL</span>    
+            <nav class="flex gap-6 text-sm mt-4 md:mt-0 uppercase">
+                <a href="index.html" class="hover:text-green-400 transition-colors font-jetbrains">HOME</a>
+                <a href="about.html" class="hover:text-green-400 transition-colors font-jetbrains">ABOUT</a>
+                <a href="stacks.html" class="hover:text-green-400 transition-colors font-jetbrains">STACKS</a>
+                <a href="certificate.html" class="hover:text-green-400 transition-colors font-jetbrains">CERTIFICATES</a>
+            </nav>
+        </header>
+
+        <main class="w-full max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-matrix text-white mb-2">Tech Stack</h2>
+            </div>
+            
+            <div class="w-full text-center bg-black/40 backdrop-blur-md p-8 border border-green-500/50 rounded-lg shadow-xl mb-12">
+                <h5 class="mb-8 text-2xl tracking-widest font-matrix text-green-500 uppercase">> Languages</h5>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
+                            <div class="absolute inset-0 bg-scanlines opacity-20"></div>
+                        </div>
+                        <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
+                            <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-java.png" alt="Java">
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">Java</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
+                            <div class="absolute inset-0 bg-scanlines opacity-20"></div>
+                        </div>
+                        <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
+                            <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-javascript.png" alt="JS">
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">JavaScript</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
+                            <div class="absolute inset-0 bg-scanlines opacity-20"></div>
+                        </div>
+                        <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
+                            <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-css.png" alt="HTML">
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">HTML</div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+
+            <div class="w-full text-center bg-black/40 backdrop-blur-md p-8 border border-green-500/50 rounded-lg shadow-xl mb-10">
+                <h5 class="text-green-500 font-matrix text-2xl mb-8 tracking-widest uppercase">> Tools</h5>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
+                            <div class="absolute inset-0 bg-scanlines opacity-20"></div>
+                        </div>
+                        <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
+                            <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-vscode.png" alt="VSCode">
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">VSCode</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
+                            <div class="absolute inset-0 bg-scanlines opacity-20"></div>
+                        </div>
+                        <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
+                            <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-ssms.png" alt="SSMS">
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">SSMS</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
+                            <div class="absolute inset-0 bg-scanlines opacity-20"></div>
+                        </div>
+                        <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
+                            <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-githublight.png" alt="GitHub">
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">GitHub</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
+                            <div class="absolute inset-0 bg-scanlines opacity-20"></div>
+                        </div>
+                        <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
+                            <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-android.png" alt="Android Studio">
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">Android Studio</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
+                            <div class="absolute inset-0 bg-scanlines opacity-20"></div>
+                        </div>
+                        <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
+                            <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-postgre.png" alt="PostgreSQL">
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">Postgre</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
+                            <div class="absolute inset-0 bg-scanlines opacity-20"></div>
+                        </div>
+                        <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
+                            <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-gitt.png" alt="Git">
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">Git</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full text-center bg-black/60 backdrop-blur-md border border-green-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-green-500/80 group">
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute w-full h-[2px] bg-green-500/40 animate-scan shadow-[0_0_8px_#00ff41]"></div>
+                            <div class="absolute inset-0 bg-scanlines opacity-20"></div>
+                        </div>
+                        <div class="h-32 flex items-center justify-center bg-green-900/10 border-b border-green-900/30">
+                            <img class="w-16 h-16 object-contain scale-110" src="images/stacks/stacks-mongo.png" alt="MongoDB">
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-green-500 text-xl font-cyber tracking-widest matrix-glow uppercase">MongoDB</div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </main>
+    </div>
+    
     <script src="script.js"></script>
-        </body>
-           </html>
+</body>
+</html>
